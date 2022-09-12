@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     
+}
+
+.game-board {
+    width: 100%;    
+    height: 70vh;
+    border-bottom: 15px solid #31f75c;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    overflow-x: none;
+    background: linear-gradient(#87ceeb, #e0f6ff);    
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 60px;     
+    animation: pipe-animation 1.5s infinite linear; /*para rodar a animação abaixo */
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;    
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.cloulds {
+    position: absolute;
+    width: 550px;
+    margin-top: 50px;
+    animation: cloulds-animation 15s infinite linear;
+}
+
+
+
+@keyframes pipe-animation { /*Para dizer onde a nimação vai começar e terminar */
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump { /*Definindo a animação por meio de porcentagem */
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cloulds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
